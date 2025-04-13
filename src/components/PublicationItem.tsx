@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FileText, Link as LinkIcon, Book, Code, X, FileCode2, FileSearch, ChevronDown, ChevronUp } from 'lucide-react';
+import { FileText, Link as LinkIcon, Code, FileCode2, FileSearch, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface Publication {
   title: string;

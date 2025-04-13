@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 
 import Hero from '@/components/Hero';
@@ -7,9 +6,6 @@ import ExperienceItem from '@/components/ExperienceItem';
 import ContactLinks from '@/components/ContactLinks';
 
 import PublicationList from '@/components/PublicationList';
-import BlogPostList from '@/components/BlogPostList';
-
-import { Download } from 'lucide-react';
 
 
 export const metadata: Metadata = {
