@@ -72,22 +72,34 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-             <h3 className="text-2xl font-semibold mb-4 text-green-700">Work / Internship</h3>
+             <h3 className="text-2xl font-semibold mb-4 text-green-700">Work</h3>
              <div className="space-y-4">
                <ExperienceItem
-                title="[Your Job Title]"
-                institution="[Company Name] | [Location]"
-                period="[Start Date] - [End Date]"
+                title="Machine Learning Engineer"
+                institution="ShopBack | Taipei, Taiwan"
+                period="May 2022 - Jun. 2023"
                 description={[
-                  "Brief description of responsibility or achievement one.",
-                  "Brief description of responsibility or achievement two.",
                 ]}
                 isFirst={true}
               />
                <ExperienceItem
-                title="[Your Job Title]"
-                institution="[Company Name] | [Location]"
-                period="[Start Date] - [End Date]"
+                title="Data Engineer"
+                institution="Junyi Academy | Taipei, Taiwan"
+                period="Feb. 2020 - Feb. 2021"
+                description={[
+                ]}
+              />
+               <ExperienceItem
+                title="Software Engineer, Applied Data Science Team"
+                institution="KKStream Limited, KKBOX Group | Taipei, Taiwan"
+                period="Dec. 2016 - Jan. 2020"
+                description={[
+                ]}
+              />
+               <ExperienceItem
+                title="Software Engineer, College Intern"
+                institution="Hewlett Packard Enterprise | Taipei, Taiwan"
+                period="Aug. 2015 - Jun. 2016"
                 description={[
                 ]}
               />
