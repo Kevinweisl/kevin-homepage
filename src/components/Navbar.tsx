@@ -16,11 +16,11 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { href: '/#about', label: 'About' },
-    { href: '/#publications', label: 'Publications' },
-    { href: '/#experience', label: 'Experience' },
+    { href: '#about', label: 'About' , key: '/#about'},
+    { href: '#publications', label: 'Publications', key: '/#publications'},
+    { href: '#experience', label: 'Experience', key: '/#experience'},
     // { href: '/#blog', label: 'Blog' }, // 如果有部落格區塊再加回來
-    { href: '/#contact', label: 'Contact' },
+    { href: '#contact', label: 'Contact', key: '/#contact'},
   ];
 
   return (
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
             <Link
-              key={link.href}
+              key={link.key}
               href={link.href}
               className="text-gray-600 hover:text-blue-600 transition duration-300 scroll-smooth"
             >
