@@ -10,6 +10,7 @@ export interface Publication {
   doiLink?: string;
   codeLink?: string;
   thumbnailUrl?: string;
+  featured?: boolean;
 }
 
 
@@ -28,7 +29,7 @@ export const publicationsData: Publication[] = [
     year = "2024"
 }`,
     pdfLink: "https://aclanthology.org/2024.emnlp-main.297",
-    // thumbnailUrl: "https://picsum.photos/seed/largelang/128",
+    featured: true,
   },
   {
     title: "Unveiling Selection Biases: Exploring Order and Token Sensitivity in Large Language Models",
@@ -45,7 +46,7 @@ export const publicationsData: Publication[] = [
 }`,
     pdfLink: "https://aclanthology.org/2024.findings-acl.333",
     codeLink: "https://github.com/Kevinweisl/unveiling-selection-biases",
-    // thumbnailUrl: "https://picsum.photos/seed/anotherpaper/128",
+    featured: true,
   },
   {
     title: "Disease Classification on Admission and on Discharge with Residual CNN-Transformer",
@@ -61,7 +62,7 @@ export const publicationsData: Publication[] = [
     year = {2021}
 }`,
     pdfLink: "https://dl.acm.org/doi/10.1145/3486622.3493946",
-    // thumbnailUrl: "https://picsum.photos/seed/anotherpaper/128",
+    featured: true,
   },
   {
     title: "NL2KB: Resolving Vocabulary Gap between Natural Language and Knowledge Base in Knowledge Base Construction and Retrieval",
@@ -77,7 +78,6 @@ export const publicationsData: Publication[] = [
     year={2016}
 }`,
     pdfLink: "https://aclanthology.org/C16-2059",
-    // thumbnailUrl: "https://picsum.photos/seed/anotherpaper/128",
   },
   {
     title: "NTUNLP approaches to recognizing and disambiguating entities in long and short text at the ERD challenge 2014",
@@ -93,7 +93,6 @@ export const publicationsData: Publication[] = [
     year = {2014}
 }`,
     pdfLink: "https://dl.acm.org/doi/10.1145/2633211.2634363",
-    // thumbnailUrl: "https://picsum.photos/seed/anotherpaper/128",
   }
   // Add more publications here
 ];

@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.className} scroll-smooth`}>
       <body className="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans antialiased">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow bg-white">
           {children}
         </main>
         <Footer />

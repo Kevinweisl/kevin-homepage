@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 import Hero from '@/components/Hero';
@@ -24,8 +25,16 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <Section id="publications" title="Publications" bgColor="bg-white">
-        <PublicationList />
+      <Section id="publications" title="Selected Publications" bgColor="bg-white">
+        <PublicationList filter='featured' />
+        <div className="mt-6 text-center">
+          <Link
+            href="/publications"
+            className="inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          >
+            View All Publications
+          </Link>
+        </div>
       </Section>
 
       <Section id="experience" title="Experience" bgColor="bg-gray-50">
