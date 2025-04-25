@@ -8,13 +8,14 @@ import ContactLinks from '@/components/ContactLinks';
 
 import PublicationList from '@/components/PublicationList';
 
+import { currentPhd, latestWork } from '@/data/experience';
+import { Download, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Kevin Wei - Personal Website',
-  description: 'Welcome to the personal website of [Your Name].',
+  description: 'Welcome to the personal website of Kevin Wei.',
 };
 
-// --- Homepage Component ---
 export default function HomePage() {
   const myObfuscatedEmail = "weisl AT nlg.csie DOT ntu.edu.tw";
   const myGithubUrl = "https://github.com/Kevinweisl";
@@ -30,101 +31,34 @@ export default function HomePage() {
         <div className="mt-6 text-center">
           <Link
             href="/publications"
-            className="inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
-          >
-            View All Publications
+            className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold group">
+            View Full Publications
+            <ArrowRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </Section>
 
-      <Section id="experience" title="Experience" bgColor="bg-gray-50">
-         <div className="max-w-3xl mx-auto space-y-10">
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-indigo-700">Education</h3>
-            <div className="space-y-4">
-               <ExperienceItem
-                title="PhD, Computer Science"
-                institution="National Taiwan University"
-                period="Ongoing (Expected Graduation: 2026)"
-                description="Main Research Area: Large Language Model"
-                isFirst={true}
-              />
-               <ExperienceItem
-                title="MS, Computer Science"
-                institution="National Taiwan University"
-                description="Main Research Area: Information Extraction"
-                period="2016"
-              />
-               <ExperienceItem
-                title="BS, Computer Science"
-                institution="National Taiwan University"
-                period="2014"
-              />
-            </div>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-purple-700">Teaching</h3>
-            <div className="space-y-4">
-               <ExperienceItem
-                title="Adjunct Instructor"
-                institution="Center of General Education, National Taiwan University"
-                period="2021 Spring - 2024 Spring, 2025 Spring - Current"
-                description="Course: Programming and Web Scraping (GenEdu5010)"
-                isFirst={true}
-              />
-               <ExperienceItem
-                title="Adjunct Instructor"
-                institution="Department of Economics, National Taiwan University"
-                period="2022 Spring, 2023 Spring, 2024 Spring, 2025 Spring"
-                description="Course: Programming (ECON1024)"
-              />
-            </div>
-          </div>
-          <div>
-             <h3 className="text-2xl font-semibold mb-4 text-green-700">Work</h3>
-             <div className="space-y-4">
-               <ExperienceItem
-                title="Machine Learning Engineer"
-                institution="ShopBack | Taipei, Taiwan"
-                period="May 2022 - Jun. 2023"
-                description={[
-                ]}
-                isFirst={true}
-              />
-               <ExperienceItem
-                title="Data Engineer"
-                institution="Junyi Academy | Taipei, Taiwan"
-                period="Feb. 2020 - Feb. 2021"
-                description={[
-                ]}
-              />
-               <ExperienceItem
-                title="Software Engineer, Applied Data Science Team"
-                institution="KKStream Limited, KKBOX Group | Taipei, Taiwan"
-                period="Dec. 2016 - Jan. 2020"
-                description={[
-                ]}
-              />
-               <ExperienceItem
-                title="Software Engineer, College Intern"
-                institution="Hewlett Packard Enterprise | Taipei, Taiwan"
-                period="Aug. 2015 - Jun. 2016"
-                description={[
-                ]}
-              />
-             </div>
-          </div>
-           <div>
-             <h3 className="text-2xl font-semibold mb-4 text-yellow-700">Awards & Honors</h3>
-              <div className="space-y-4">
-                 <ExperienceItem
-                  title="[Award Name]"
-                  institution="[Awarding Institution]"
-                  period="[Year Received]"
-                  isFirst={true}
-                />
+      <Section id="experience" title="Experience Highlights" bgColor="bg-gray-50">
+         <div className="max-w-3xl mx-auto space-y-6">
+            {currentPhd && (
+              <div>
+                 <ExperienceItem {...currentPhd} isFirst={true} />
               </div>
-           </div>
+            )}
+            {latestWork && (
+              <div>
+                 <ExperienceItem {...latestWork} isFirst={!currentPhd} />
+              </div>
+            )}
+            {!currentPhd && !latestWork && (
+                <p className="text-center text-gray-500">Experience highlights will be shown here.</p>
+            )}
+         </div>
+         <div className="text-center mt-12">
+          <Link href="/experience" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold group">
+            View Full Experience
+            <ArrowRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </Section>
 

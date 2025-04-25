@@ -16,11 +16,9 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { href: '#about', label: 'About' , key: '/#about'},
-    { href: '#publications', label: 'Publications', key: '/#publications'},
-    { href: '#experience', label: 'Experience', key: '/#experience'},
+    { href: '/publications', label: 'Publications', key: '/#publications'},
+    { href: '/experience', label: 'Experience', key: '/#experience'},
     // { href: '/#blog', label: 'Blog' }, // 如果有部落格區塊再加回來
-    { href: '#contact', label: 'Contact', key: '/#contact'},
   ];
 
   return (
