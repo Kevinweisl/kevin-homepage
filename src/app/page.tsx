@@ -9,7 +9,7 @@ import ContactLinks from '@/components/ContactLinks';
 import PublicationList from '@/components/PublicationList';
 
 import { currentPhd, latestWork } from '@/data/experience';
-import { Download, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Kevin Wei - Personal Website',
