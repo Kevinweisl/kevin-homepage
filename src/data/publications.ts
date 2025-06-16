@@ -16,6 +16,14 @@ export interface Publication {
 
 export const publicationsData: Publication[] = [
   {
+    title: "Retrieving the Right Law: Enhancing Legal Search with Style Translation",
+    authors: "Szu-Ju Chen, Jing Jin, Sheng-Lun Wei, Chien-Hung Chen, Hsin-Hsi Chen",
+    venue: "International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    venueAcronym: "SIGIR 2025",
+    year: 2025,
+    featured: true
+  },
+  {
     title: "Induct-Learn: Short Phrase Prompting with Instruction Induction",
     authors: "Po-Chun Chen, Sheng-Lun Wei, Hen-Hsen Huang, Hsin-Hsi Chen",
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
@@ -61,8 +69,7 @@ export const publicationsData: Publication[] = [
     booktitle = {IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology},
     year = {2021}
 }`,
-    pdfLink: "https://dl.acm.org/doi/10.1145/3486622.3493946",
-    featured: true,
+    pdfLink: "https://dl.acm.org/doi/10.1145/3486622.3493946"
   },
   {
     title: "NL2KB: Resolving Vocabulary Gap between Natural Language and Knowledge Base in Knowledge Base Construction and Retrieval",

@@ -1,4 +1,3 @@
-// src/components/Hero.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -6,11 +5,10 @@ import { Download } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center py-16 md:py-20 lg:py-24"> {/* Increased padding slightly */}
+    <section id="home" className="bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 text-center">
-        {/* Profile Image */}
         <Image
-          src="https://picsum.photos/seed/your_seed/150" // Use a consistent seed or your actual photo
+          src="https://picsum.photos/seed/your_seed/150"
           alt="[Your Name]'s Photo"
           width={144}
           height={144}
@@ -20,19 +18,13 @@ const Hero: React.FC = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">Sheng-Lun (Kevin) Wei</h1>
         <p className="text-xl text-gray-600 mb-6">Computer Science PhD Candidate @ National Taiwan University</p>
 
-        <div className="max-w-3xl mx-auto text-gray-700 space-y-4 mb-8 text-lg leading-relaxed"> {/* Use max-w-3xl and text-lg for readability */}
+        <div className="max-w-3xl mx-auto text-gray-700 space-y-4 mb-8 text-lg leading-relaxed" style={{ fontFamily: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif' }}>
           <p>
-            Briefly introduce your research interests and expertise here. e.g., Focusing on Machine Learning, Natural Language Processing, Computer Vision, etc.
-          </p>
-          <p>
-            Provide a more detailed introduction about yourself here, including your academic background, research passion, goals, etc. You can mention why you chose this research field and your long-term career plans.
-          </p>
-          <p>
-            You can also add some personal interests or extracurricular activities to make your profile more engaging.
+            I am a Computer Science PhD candidate at National Taiwan University, focusing on Natural Language Processing. My research interests lie in Large Language Models. With a strong background in both academia and industry, I have 6+ year experience as a Machine Learning Engineer at ShopBack, Junyi Academy, and KKStream. I am passionate about bridging the gap between theoretical research and practical applications. Beyond my academic and professional pursuits, I am a dedicated baseball enthusiast with over 20 years of experience following MLB, NPB, and CPBL. I am also the founder of <Link href="https://www.ccclub.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">ccClub</Link>, a non-profit organization dedicated to teaching programming and fostering a collaborative learning environment. Over the past 8 years, more than 3,000 people have learned with ccClub. Through ccClub, I aim to share my knowledge and experience with the next generation of developers.
           </p>
         </div>
 
-        <div className="flex justify-center items-center flex-wrap gap-4 mt-8"> {/* Group buttons */}
+        <div className="flex justify-center items-center flex-wrap gap-4 mt-8">
           <Link href="#contact" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 scroll-smooth">
             Contact Me
           </Link>
